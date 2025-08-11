@@ -17,9 +17,11 @@ CREATE TABLE Users (
 );
 
 -- 2. OtpVerifications Table
+
 CREATE TABLE OtpVerifications (
     otpId INT IDENTITY(1,1) PRIMARY KEY,
-    userId INT NOT NULL FOREIGN KEY REFERENCES Users(userId) ON DELETE CASCADE,
+    userId INT NULL FOREIGN KEY REFERENCES Users(userId) ON DELETE CASCADE,
+    email NVARCHAR(255) NULL,
     otpCode NVARCHAR(10) NOT NULL,
     purpose NVARCHAR(20) CHECK (purpose IN ('signup','login','resetPassword')) NOT NULL,
     expiresAt DATETIME NOT NULL,
@@ -134,10 +136,16 @@ VALUES
 -- ================================
 -- 2. OtpVerifications
 -- ================================
-INSERT INTO OtpVerifications (userId, otpCode, purpose, expiresAt, isUsed)
+-- OTP linked to existing user
+INSERT INTO OtpVerifications (userId, otpCode, purpose, expiresAt, isUsed, email)
 VALUES
-(1, '123456', 'signup', DATEADD(MINUTE, 10, GETDATE()), 0),
-(2, '654321', 'resetPassword', DATEADD(MINUTE, 5, GETDATE()), 1);
+(1, '123456', 'signup', DATEADD(MINUTE, 10, GETDATE()), 0, NULL);
+
+-- OTP for signup using email (no userId yet)
+INSERT INTO OtpVerifications (userId, otpCode, purpose, expiresAt, isUsed, email)
+VALUES
+(NULL, '654321', 'signup', DATEADD(MINUTE, 15, GETDATE()), 0, 'newuser@example.com');
+
 
 -- ================================
 -- 3. Sports

@@ -1,0 +1,6 @@
+@QuickCourtBackend_HostAddress = http://localhost:5085
+
+GET {{QuickCourtBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
