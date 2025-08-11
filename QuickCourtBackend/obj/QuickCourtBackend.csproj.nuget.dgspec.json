@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\QuickCourt-A-Local-Sports-Booking\\QuickCourtBackend\\QuickCourtBackend.csproj": {}
+    "D:\\Odoo\\QuickCourt\\QuickCourtBackend\\QuickCourtBackend.csproj": {}
   },
   "projects": {
-    "D:\\QuickCourt-A-Local-Sports-Booking\\QuickCourtBackend\\QuickCourtBackend.csproj": {
+    "D:\\Odoo\\QuickCourt\\QuickCourtBackend\\QuickCourtBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\QuickCourt-A-Local-Sports-Booking\\QuickCourtBackend\\QuickCourtBackend.csproj",
+        "projectUniqueName": "D:\\Odoo\\QuickCourt\\QuickCourtBackend\\QuickCourtBackend.csproj",
         "projectName": "QuickCourtBackend",
-        "projectPath": "D:\\QuickCourt-A-Local-Sports-Booking\\QuickCourtBackend\\QuickCourtBackend.csproj",
-        "packagesPath": "C:\\Users\\Manshi\\.nuget\\packages\\",
-        "outputPath": "D:\\QuickCourt-A-Local-Sports-Booking\\QuickCourtBackend\\obj\\",
+        "projectPath": "D:\\Odoo\\QuickCourt\\QuickCourtBackend\\QuickCourtBackend.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\Odoo\\QuickCourt\\QuickCourtBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Manshi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
