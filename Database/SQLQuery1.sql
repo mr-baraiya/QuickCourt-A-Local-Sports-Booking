@@ -153,7 +153,11 @@ VALUES
 INSERT INTO Sports (name, iconUrl)
 VALUES
 ('Badminton', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg'),
-('Tennis', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg');
+('Tennis', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg'),
+('Soccer', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOG8KtINSd767Zs4ouSJDNuhnzb9FI2Qlk1g&s'),
+('Basketball', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4O4bjNxplMQkdUJ6dsQzZubwKkVlOYgf12Q&s'),
+('Volleyball', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSYLVdRIK8s8AUjLi6ZFS7A4Lmzxdnxi6Fmg&s'),
+('Cricket', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDYY94t1qi73P6Jvk6wIUifKi7NCZ6VUW0jQ&s');
 
 -- ================================
 -- 4. Facilities
@@ -221,9 +225,9 @@ VALUES
 -- ================================
 INSERT INTO FacilityPhotos (facilityId, photoUrl, caption)
 VALUES
-(1, 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'Main indoor hall'),
-(1, 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'Outdoor area'),
-(2, 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'Tennis court front view');
+(1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5vuKBTQ5HMKyadnx7YMHQUMuNXg2hTyirRA&s', 'Main indoor hall'),
+(1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShC-VL0-2EeUArnMDSGC6X9UNs8BxGzt44Hw&s', 'Outdoor area'),
+(2, 'https://thumbs.dreamstime.com/b/tennis-blue-court-perspective-upper-front-view-sport-theme-render-illustration-background-own-design-55049092.jpg', 'Tennis court front view');
 
 -- Users
 SELECT * FROM Users;
