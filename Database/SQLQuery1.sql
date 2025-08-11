@@ -127,9 +127,9 @@ CREATE TABLE FacilityPhotos (
 -- ================================
 INSERT INTO Users (fullName, email, passwordHash, phone, avatarUrl, role, isVerified, isActive)
 VALUES
-('Nency Parmar', 'nency@example.com', 'hashedpass1', '9876543210', NULL, 'facilityOwner', 1, 1),
-('Vishal Baraiya', 'vishal@example.com', 'hashedpass2', '9123456780', NULL, 'user', 1, 1),
-('Darshi Kathrani', 'darshi@example.com', 'hashedpass3', '9988776655', NULL, 'admin', 1, 1);
+('Nency Parmar', 'nency@example.com', 'hashedpass1', '9876543210', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'facilityOwner', 1, 1),
+('Vishal Baraiya', 'vishal@example.com', 'hashedpass2', '9123456780', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'user', 1, 1),
+('Darshi Kathrani', 'darshi@example.com', 'hashedpass3', '9988776655','https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'admin', 1, 1);
 
 -- ================================
 -- 2. OtpVerifications
@@ -144,8 +144,8 @@ VALUES
 -- ================================
 INSERT INTO Sports (name, iconUrl)
 VALUES
-('Badminton', 'icons/badminton.png'),
-('Tennis', 'icons/tennis.png');
+('Badminton', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg'),
+('Tennis', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg');
 
 -- ================================
 -- 4. Facilities
@@ -213,9 +213,9 @@ VALUES
 -- ================================
 INSERT INTO FacilityPhotos (facilityId, photoUrl, caption)
 VALUES
-(1, 'photos/arena1.jpg', 'Main indoor hall'),
-(1, 'photos/arena2.jpg', 'Outdoor area'),
-(2, 'photos/sunrise1.jpg', 'Tennis court front view');
+(1, 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'Main indoor hall'),
+(1, 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'Outdoor area'),
+(2, 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'Tennis court front view');
 
 -- Users
 SELECT * FROM Users;
