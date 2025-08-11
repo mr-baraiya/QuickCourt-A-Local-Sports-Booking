@@ -8,9 +8,9 @@
 
 **Team Leader:** Nency Parmar
 
-| Name             | Responsibility                          | 🔧 Contribution Highlights                                                                                                      |
+| Name             | Responsibility                          | Contribution Highlights                                                                                                      |
 | ------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| **Nency Parmar**    | Frontend Developer (UI/UX), Team Leader | Built responsive, accessible UI using **Next.js**, **Tailwind CSS**, and **shadcn/ui** while leading overall project execution. |
+| **Nency Parmar**    | Frontend Developer (UI/UX), Team Leader | Built responsive, accessible UI using **React.js**, **Tailwind CSS**, and **shadcn/ui** while leading overall project execution. |
 | **Mansi Nimavat**   | API Integration (Frontend)              | Connected backend APIs using **Fetch**, **Axios**, and **React Hooks** in **Next.js** for seamless data flow.                   |
 | **Darshi Kathrani** | Database Designer                       | Designed database structures, tested core features, resolved UI bugs, and supported basic AI utilities using **NPM**.           |
 | **Vishal Baraiya**  | Backend Developer                       | Designed and developed secure RESTful APIs using **ASP.NET Core** and integrated **SQL Server** for robust data management.     |
@@ -88,29 +88,3 @@ Facility owners can manage facilities, set availability, view bookings, and trac
 * Peak Booking Hours.
 * Facility Approval Trends.
 * Most Active Sports.
-
----
-
-## 🗄 Database Schema (Overview)
-
-**Tables**
-
-* `Users` (User, Owner, Admin roles)
-* `Facilities`
-* `Courts`
-* `Bookings`
-* `Amenities`
-* `Reviews`
-* `TimeSlots`
-* `Payments`
-* `AdminActions`
-
-(Relationships defined via foreign keys for Users → Facilities → Courts → Bookings)
----
-
-## 👨‍💻 Contributors
-
-* **You** – Full-stack Development
-* Team Members (if any)
-
----
