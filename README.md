@@ -17,11 +17,6 @@
 
 ---
 
-If you want, I can now **merge this into the full README** I wrote earlier so you’ll have a complete, ready-to-upload markdown file for GitHub.
-I can also **add nice tech badges at the top** to make it look even more professional.
-
----
-
 ## 📌 Overview
 
 **QuickCourt** is a full-stack web application enabling users to **book local sports venues** (badminton courts, turf grounds, tennis tables, etc.), create/join matches, and connect with the community.
