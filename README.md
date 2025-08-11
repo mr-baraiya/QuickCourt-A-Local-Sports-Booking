@@ -17,7 +17,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 **QuickCourt** is a full-stack web application enabling users to **book local sports venues** (badminton courts, turf grounds, tennis tables, etc.), create/join matches, and connect with the community.
 Facility owners can manage facilities, set availability, view bookings, and track earnings, while admins manage approvals, users, and global stats.
