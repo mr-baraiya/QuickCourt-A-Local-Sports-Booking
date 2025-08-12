@@ -20,48 +20,21 @@ const VenueList = ({ venues }) => {
   }
 
   return (
-    <section className="mt-12 mb-12">
+    <section style={{ marginTop: '40px' }}>
       <SectionHeader title="Book Venues" linkText="See all venues >" href="#all-venues" />
-      
-      <div className="relative">
-        {/* Left scroll button */}
-        <button 
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-2 hover:bg-gray-50 transition-colors hidden md:block"
-          onClick={() => scroll('left')} 
-          aria-label="Scroll Left"
-        >
-          <FiChevronLeft className="w-6 h-6 text-gray-600" />
+      <div className="venue-list-container">
+        <button className="scroll-arrow left" onClick={() => scroll('left')} aria-label="Scroll Left">
+          <FiChevronLeft />
         </button>
-
-        {/* Scrollable container */}
-        <div 
-          className="flex gap-6 overflow-x-auto pb-4 px-2 md:px-12 scrollbar-hide"
-          ref={scrollRef}
-          style={{
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
-          }}
-        >
+        <div className="venue-scroll-wrapper" ref={scrollRef}>
           {venues.map((venue) => (
             <VenueCard key={venue.venueId || venue.id} venue={venue} />
           ))}
         </div>
-
-        {/* Right scroll button */}
-        <button 
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-2 hover:bg-gray-50 transition-colors hidden md:block"
-          onClick={() => scroll('right')} 
-          aria-label="Scroll Right"
-        >
-          <FiChevronRight className="w-6 h-6 text-gray-600" />
+        <button className="scroll-arrow right" onClick={() => scroll('right')} aria-label="Scroll Right">
+          <FiChevronRight />
         </button>
       </div>
-
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 };

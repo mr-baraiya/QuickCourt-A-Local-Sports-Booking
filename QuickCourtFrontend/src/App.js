@@ -64,13 +64,13 @@ function App() {
   return (
     // 2. Wrap everything in a Router
     <Router>
-      <div className="min-h-screen flex flex-col bg-gray-50">
+      <div className="app-container">
         <Header />
-        <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <main>
           {loading ? (
             <Loader message="Loading awesome courts and sports..." />
           ) : error ? (
-            <div className="text-center py-12 text-lg text-gray-600">{error}</div>
+            <div className="status-message">{error}</div>
           ) : (
             // 3. Define the routes for your application
             <Routes>
