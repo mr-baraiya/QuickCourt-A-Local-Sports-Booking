@@ -17,11 +17,9 @@ CREATE TABLE Users (
 );
 
 -- 2. OtpVerifications Table
-
 CREATE TABLE OtpVerifications (
     otpId INT IDENTITY(1,1) PRIMARY KEY,
-    userId INT NULL FOREIGN KEY REFERENCES Users(userId) ON DELETE CASCADE,
-    email NVARCHAR(255) NULL,
+    userId INT NOT NULL FOREIGN KEY REFERENCES Users(userId) ON DELETE CASCADE,
     otpCode NVARCHAR(10) NOT NULL,
     purpose NVARCHAR(20) CHECK (purpose IN ('signup','login','resetPassword')) NOT NULL,
     expiresAt DATETIME NOT NULL,
@@ -136,16 +134,10 @@ VALUES
 -- ================================
 -- 2. OtpVerifications
 -- ================================
--- OTP linked to existing user
-INSERT INTO OtpVerifications (userId, otpCode, purpose, expiresAt, isUsed, email)
+INSERT INTO OtpVerifications (userId, otpCode, purpose, expiresAt, isUsed)
 VALUES
-(1, '123456', 'signup', DATEADD(MINUTE, 10, GETDATE()), 0, NULL);
-
--- OTP for signup using email (no userId yet)
-INSERT INTO OtpVerifications (userId, otpCode, purpose, expiresAt, isUsed, email)
-VALUES
-(NULL, '654321', 'signup', DATEADD(MINUTE, 15, GETDATE()), 0, 'newuser@example.com');
-
+(1, '123456', 'signup', DATEADD(MINUTE, 10, GETDATE()), 0),
+(2, '654321', 'resetPassword', DATEADD(MINUTE, 5, GETDATE()), 1);
 
 -- ================================
 -- 3. Sports
@@ -153,11 +145,7 @@ VALUES
 INSERT INTO Sports (name, iconUrl)
 VALUES
 ('Badminton', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg'),
-('Tennis', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg'),
-('Soccer', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOG8KtINSd767Zs4ouSJDNuhnzb9FI2Qlk1g&s'),
-('Basketball', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4O4bjNxplMQkdUJ6dsQzZubwKkVlOYgf12Q&s'),
-('Volleyball', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSYLVdRIK8s8AUjLi6ZFS7A4Lmzxdnxi6Fmg&s'),
-('Cricket', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDYY94t1qi73P6Jvk6wIUifKi7NCZ6VUW0jQ&s');
+('Tennis', 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg');
 
 -- ================================
 -- 4. Facilities
@@ -225,9 +213,9 @@ VALUES
 -- ================================
 INSERT INTO FacilityPhotos (facilityId, photoUrl, caption)
 VALUES
-(1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5vuKBTQ5HMKyadnx7YMHQUMuNXg2hTyirRA&s', 'Main indoor hall'),
-(1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShC-VL0-2EeUArnMDSGC6X9UNs8BxGzt44Hw&s', 'Outdoor area'),
-(2, 'https://thumbs.dreamstime.com/b/tennis-blue-court-perspective-upper-front-view-sport-theme-render-illustration-background-own-design-55049092.jpg', 'Tennis court front view');
+(1, 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'Main indoor hall'),
+(1, 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'Outdoor area'),
+(2, 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/11.jpg', 'Tennis court front view');
 
 -- Users
 SELECT * FROM Users;
