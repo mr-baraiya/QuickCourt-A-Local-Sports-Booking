@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuickCourtBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34eb99e5ceb7e7e0f2d7cdbb57a8ebf6d21fb3b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07773ab98b3ccc0061326a6b05a5472d9e2b28b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuickCourtBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuickCourtBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
