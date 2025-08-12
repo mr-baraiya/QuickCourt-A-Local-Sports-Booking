@@ -3,6 +3,16 @@ using QuickCourtBackend.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        policy => policy
+            .WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
+
 // Register DbContext early
 builder.Services.AddDbContext<QuickCourtContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("myConnectionString"))
@@ -22,6 +32,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+app.UseCors("AllowReactApp");
 app.UseHttpsRedirection();
 
 // Add Authentication and Authorization middleware if applicable

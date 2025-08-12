@@ -1,5 +1,135 @@
 [
   {
+    "ContainingType": "QuickCourtBackend.Controllers.AdminController",
+    "Method": "GetBookingActivity",
+    "RelativePath": "api/Admin/dashboard/charts/booking-activity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.AdminController",
+    "Method": "GetMostActiveSports",
+    "RelativePath": "api/Admin/dashboard/charts/most-active-sports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.AdminController",
+    "Method": "GetDashboardStats",
+    "RelativePath": "api/Admin/dashboard/stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.AdminController",
+    "Method": "UpdateFacilityStatus",
+    "RelativePath": "api/Admin/facilities/{facilityId}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "facilityId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "QuickCourtBackend.Controllers.FacilityStatusUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.AdminController",
+    "Method": "GetPendingFacilities",
+    "RelativePath": "api/Admin/facilities/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "QuickCourtBackend.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "QuickCourtBackend.Controllers.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.BookingController",
+    "Method": "GetAvailableSlots",
+    "RelativePath": "api/Booking/available-slots",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "facilityId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.BookingController",
+    "Method": "CreateBooking",
+    "RelativePath": "api/Booking/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bookingRequest",
+        "Type": "QuickCourtBackend.Controllers.BookingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "QuickCourtBackend.Controllers.BookingsController",
     "Method": "CreateBooking",
     "RelativePath": "api/Bookings",
@@ -474,6 +604,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "QuickCourtBackend.Controllers.FacilityOwnerController",
+    "Method": "GetBookingTrends",
+    "RelativePath": "api/FacilityOwner/dashboard/bookings/{ownerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "range",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.FacilityOwnerController",
+    "Method": "GetDashboardStats",
+    "RelativePath": "api/FacilityOwner/dashboard/stats/{ownerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "QuickCourtBackend.Controllers.FacilityPhotosController",
     "Method": "AddPhoto",
     "RelativePath": "api/FacilityPhotos",
@@ -487,6 +654,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickCourtBackend.Controllers.FacilityPhotosController",
+    "Method": "GetFacilitiesPhoto",
+    "RelativePath": "api/FacilityPhotos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -1104,74 +1281,6 @@
       {
         "Name": "userId",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuickCourtBackend.Controllers.UsersController",
-    "Method": "ChangePassword",
-    "RelativePath": "api/Users/change-password",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "QuickCourtBackend.Controllers.ChangePasswordRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuickCourtBackend.Controllers.UsersController",
-    "Method": "GetTotalUserCount",
-    "RelativePath": "api/Users/count",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuickCourtBackend.Controllers.UsersController",
-    "Method": "Login",
-    "RelativePath": "api/Users/login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "QuickCourtBackend.Controllers.UserLoginRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuickCourtBackend.Controllers.UsersController",
-    "Method": "GetTotalFacilityOwnersCount",
-    "RelativePath": "api/Users/owners/count",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuickCourtBackend.Controllers.UsersController",
-    "Method": "Register",
-    "RelativePath": "api/Users/register",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "QuickCourtBackend.Controllers.UserRegistrationRequest",
         "IsRequired": true
       }
     ],

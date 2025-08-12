@@ -101,6 +101,20 @@ namespace QuickCourtBackend.Controllers
             }
         }
         #endregion
-
+        #region Get All Facilities
+        [HttpGet]
+        public async Task<IActionResult> GetFacilitiesPhoto()
+        {
+            try
+            {
+                var facilities = await _context.FacilityPhotos.ToListAsync();
+                return Ok(facilities);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Error retrieving facilities.", Error = ex.Message });
+            }
+        }
+        #endregion
     }
 }

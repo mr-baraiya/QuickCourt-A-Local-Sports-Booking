@@ -14,4 +14,5 @@ public partial class FacilityPhoto
 
     [JsonIgnore]
     public virtual Facility? Facility { get; set; }
+    
 }
