@@ -1,90 +1,70 @@
-# **QuickCourt – Local Sports Booking Platform**
+# Getting Started with Create React App
 
-> **Book. Play. Connect.** – A seamless way for sports enthusiasts to find and book local sports facilities, and for facility owners to manage courts, schedules, and earnings.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-## Team: **ThinkOutside4**
+In the project directory, you can run:
 
-**Team Leader:** Nency Parmar
+### `npm start`
 
-| Name             | Responsibility                          | Contribution Highlights                                                                                                      |
-| ------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| **Nency Parmar**    | Frontend Developer (UI/UX), Team Leader | Built responsive, accessible UI using **React.js**, **Tailwind CSS**, and **shadcn/ui** while leading overall project execution. |
-| **Mansi Nimavat**   | API Integration (Frontend)              | Connected backend APIs using **Fetch**, **Axios**, and **React Hooks** in **Next.js** for seamless data flow.                   |
-| **Darshi Kathrani** | Database Designer                       | Designed database structures, tested core features, resolved UI bugs, and supported basic AI utilities using **NPM**.           |
-| **Vishal Baraiya**  | Backend Developer                       | Designed and developed secure RESTful APIs using **ASP.NET Core** and integrated **SQL Server** for robust data management.     |
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Overview
+### `npm test`
 
-**QuickCourt** is a full-stack web application enabling users to **book local sports venues** (badminton courts, turf grounds, tennis tables, etc.), create/join matches, and connect with the community.
-Facility owners can manage facilities, set availability, view bookings, and track earnings, while admins manage approvals, users, and global stats.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
----
+### `npm run build`
 
-## Tech Stack
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-**Frontend**
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-* React.js
-* Tailwind CSS
-* Framer Motion (animations)
-* Chart.js / Recharts (analytics)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-**Backend**
+### `npm run eject`
 
-* ASP.NET Core Web API
-* JWT Authentication
-* Entity Framework Core
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-**Database**
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-* SQL Server
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-**Other**
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-* OTP Verification
-* Simulated Payment Gateway
-* Role-Based Access Control (User, Facility Owner, Admin)
+## Learn More
 
----
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Features
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### **User**
+### Code Splitting
 
-* Signup/Login with OTP verification.
-* Search and filter venues by sport type, price, rating.
-* View venue details, photos, amenities, reviews.
-* Book courts with date/time selection.
-* View & manage bookings (cancel, track status).
-* Edit personal profile.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### **Facility Owner**
+### Analyzing the Bundle Size
 
-* Dashboard with KPIs: total bookings, active courts, earnings.
-* Add/Edit/Delete facilities & courts.
-* Set pricing/hour & operating hours.
-* Block/unblock time slots for maintenance.
-* View upcoming/past bookings with user details.
-* Manage profile.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### **Admin**
+### Making a Progressive Web App
 
-* Dashboard with global stats (total users, bookings, active courts).
-* Approve/Reject facility registration requests.
-* Manage users (search, filter, ban/unban).
-* View booking history.
-* Reports & moderation (optional).
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
----
+### Advanced Configuration
 
-## Analytics & Charts
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-* Daily/Weekly/Monthly Booking Trends.
-* Earnings Summary.
-* Peak Booking Hours.
-* Facility Approval Trends.
-* Most Active Sports.
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
