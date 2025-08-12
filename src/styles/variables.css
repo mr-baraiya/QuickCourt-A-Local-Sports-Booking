@@ -1,0 +1,15 @@
+/* Defines reusable values for colors, fonts, etc. */
+:root {
+  --primary-color: #333;
+  --secondary-color: #757575;
+  --background-color: #ffffff;
+  --surface-color: #f8f9fa;
+  --border-color: #e0e0e0;
+  --accent-color: #007bff; /* A generic accent color */
+
+  --font-family: 'Inter', sans-serif;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

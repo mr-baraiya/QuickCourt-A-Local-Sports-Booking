@@ -1,0 +1,38 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+export default function AdminSidebar() {
+  const linkStyle = {
+    display: 'block',
+    padding: '10px 15px',
+    color: 'white',
+    textDecoration: 'none',
+    borderRadius: '4px',
+    marginBottom: '5px',
+  };
+
+  const activeLinkStyle = {
+    backgroundColor: '#4a5568',
+  };
+
+  return (
+    <div style={{ width: '250px', backgroundColor: '#2d3748', padding: '20px', color: 'white' }}>
+      <h2 style={{ marginBottom: '20px' }}>Admin Panel</h2>
+      <nav>
+        <NavLink 
+          to="/admin/dashboard" 
+          style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeLinkStyle : {}) })}
+        >
+          Dashboard
+        </NavLink>
+        <NavLink 
+          to="/admin/facilities" 
+          style={({ isActive }) => ({ ...linkStyle, ...(isActive ? activeLinkStyle : {}) })}
+        >
+          Facility Approvals
+        </NavLink>
+        {/* Add more admin links here */}
+      </nav>
+    </div>
+  );
+}

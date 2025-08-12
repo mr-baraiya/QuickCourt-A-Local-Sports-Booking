@@ -1,0 +1,373 @@
+/* Styles for all the individual components. 
+  In a larger app, you might split this into separate CSS files per component.
+*/
+
+/* --- Header --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.header-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.header-nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- Hero --- */
+.hero {
+  display: flex;
+  gap: 24px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.hero-content, .hero-image {
+  flex: 1;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.hero-content p {
+  color: var(--secondary-color);
+  margin-bottom: 24px;
+}
+.location-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 8px 12px;
+  max-width: 250px;
+}
+.location-input input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-left: 8px;
+  background: transparent;
+}
+.hero-image {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius-md);
+  display: grid;
+  place-items: center;
+  color: var(--secondary-color);
+  min-height: 250px;
+}
+
+/* --- Section Header --- */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.section-header h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+.section-header a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* --- Venue List & Card (Homepage) --- */
+.venue-list-container {
+  position: relative;
+}
+.venue-scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 16px; /* Space for scrollbar */
+  scrollbar-width: none; /* Firefox */
+}
+.venue-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.scroll-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-sm);
+  z-index: 10;
+}
+.scroll-arrow.left { left: -20px; }
+.scroll-arrow.right { right: -20px; }
+
+.venue-card {
+  flex: 0 0 280px; /* Prevents card from shrinking in flexbox */
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+.venue-card-image {
+  height: 150px;
+  background-color: var(--surface-color);
+  display: grid;
+  place-items: center;
+  color: var(--secondary-color);
+  flex-shrink: 0; /* Prevents image from shrinking */
+}
+.venue-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the image fill the space without distortion */
+}
+.venue-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows body to fill remaining space */
+}
+.venue-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+.venue-card-location {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+}
+.venue-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto; /* Pushes tags to the bottom before the button */
+}
+.tag {
+  background-color: var(--surface-color);
+  color: var(--secondary-color);
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+
+/* --- Sport List & Card --- */
+.sport-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+.sport-card {
+  position: relative;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4 / 5;
+  color: white;
+}
+.sport-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.sport-card:hover img {
+  transform: scale(1.05);
+}
+.sport-card-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  font-weight: 600;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid var(--border-color);
+  color: var(--secondary-color);
+  margin-top: 40px;
+}
+
+
+/* ================================================================
+  NEW STYLES FOR THE ALL VENUES PAGE - ADDED BELOW
+================================================================
+*/
+
+/* --- Venues Page Layout --- */
+.venues-page-container {
+  padding: 20px 0;
+}
+.page-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+.page-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+.page-content {
+  display: flex;
+  gap: 32px;
+}
+
+/* --- Filters Sidebar --- */
+.filters-sidebar {
+  flex: 0 0 280px; /* Fixed width for the sidebar */
+}
+.filters-sidebar h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.filter-search {
+  position: relative;
+}
+.filter-search svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+}
+.filter-search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+}
+.filters-sidebar select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  background-color: white;
+}
+.price-filter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.price-filter input[type="range"] {
+  width: 100%;
+}
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.clear-filters-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 24px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Venue Grid --- */
+.venue-grid-container {
+  flex: 1;
+}
+.venue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* --- Pagination --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+.pagination button {
+  border: 1px solid var(--border-color);
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+}
+.pagination button.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+/* --- Updated Venue Card Styles for Grid Page --- */
+.venue-card-price {
+  font-weight: 600;
+  margin: 8px 0;
+}
+.venue-card-button {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  margin-top: 16px;
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.venue-card-button:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
